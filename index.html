@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <title>Escalab Challenge</title>
+</head>
+<body>
+    <header>
+        <h1>CountryFi</h1>
+    </header>
+    <nav>
+        <form class="searchForm" id="search-form">
+            <label>Country search</label>
+            <input type="text" id="searchInput" placeholder="Type a Country...">
+            <button class="searchBtn">Search</button>
+        </form>
+    </nav>
+    <section>
+        <!-- Filter by regions -->
+        <button class="searchBtn" onclick="fetchRegions(this.id)" id="america">America</button>
+        <button class="searchBtn" onclick="fetchRegions(this.id)" id="asia">Asia</button>
+        <button class="searchBtn" onclick="fetchRegions(this.id)" id="oceania">Oceania</button>
+        <button class="searchBtn" onclick="fetchRegions(this.id)" id="europe">Europa</button>
+        <button class="searchBtn" onclick="fetchRegions(this.id)" id="africa">Africa</button>
+    </section>
+    
+    <div class="container" id="items">
+        <!-- Cards Container -->
+    </div>
+
+    <div class="container" id="items2">
+        <!-- Cards Container -->
+    </div>
+
+    <div class="modal-screen" id="modal">
+        <!-- Cards Container -->
+    </div>
+
+    <template id="template-card">
+        <div class="card-structure">
+            <div class="cards">
+                <div class="card-body">
+                    <img src="" alt=""/>
+                    <div class="card-info">
+                        <p id="card-country">Pais</p>
+                        <p id="capital">Capital</p>
+                        <p id="region">region</p>
+                        <p id="pop">Population</p>
+                        <button class="button-c">See more ...</button>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </template>
+
+    <template id="template-card-region">
+        <div class="card-structure">
+            <div class="cards">
+                <div class="card-body">
+                    <img src="" alt="" class="template-region-img"/>
+                    <div class="card-info">
+                        <p>Pais</p>
+                        <p>Capital</p>
+                        <p>Population</p>
+                        <span>region</span>
+                        <button class="button-c">See more ...</button>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </template>
+
+    <template id="template-modal">
+                <div class="card-body-modal">
+                    <img src="" alt="" class="modal-img"/>
+                    <div class="card-info-modal">
+                        <p id="modal-country">Country</p>
+                        <p id="modal-capital">Capital</p>
+                        <p id="modal-region">Region</p>
+                        <p id="modal-pop">Population</p>
+                        <p id="modal-fifa">Fifa</p>
+                        <button class="card-search-close-btn" onclick="closeModal()">Close</button>
+                    </div>
+                </div>
+    </template>
+
+    <template id="template-search">
+        <div class="card-body-search">
+            <img src="" alt="" class="search-img"/>
+            <div class="card-info-modal">
+                <p id="search-country">Country</p>
+                <p id="search-capital">Capital</p>
+                <p id="search-region">Region</p>
+                <p id="search-pop">Population</p>
+                <p id="search-fifa">Fifa</p>
+            </div>
+        </div>
+</template>
+
+    <div class="error" id="err"><h2>:(</h2><p>There´s no results for this search...</p></div>
+
+    <div class="phoneBasicUpperBar">
+        <div class="itemsLeft">
+            <small>movistar</small>
+            <i class="fa fa-signal" aria-hidden="true"></i>
+            <i class="fa fa-wifi" aria-hidden="true"></i>
+        </div>
+
+        <div class="itemsRight">
+            <small>35%</small>
+            <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+        </div>
+
+    </div>
+
+    <footer>Country fi Designed by Clemente Falcone</footer>
+    <script src="./app.js"></script>
+</body>
+</html>
